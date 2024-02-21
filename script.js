@@ -1,8 +1,8 @@
-const downArrow = document.getElementsByClassName("down-arrow__icon");
+const downArrow = document.getElementById("#down-arrow");
 
 downArrow.addEventListener("click", function() {
   window.scrollBy({
-    bottom: window.innerHeight,
+    top: 0,
     behavior: "smooth"
   });
 });
