@@ -5,13 +5,12 @@
   }
 
   html{
-	/* scroll-behavior: smooth; */
+	scroll-behavior: smooth;
   }
   
   body {
 	background-color: #1b4332;
 	height: 200vh;
-	/* overflow: hidden; */
   }
   
   header {
@@ -22,16 +21,11 @@
   .nav-bar {
 	width: auto;
 	height: 100%;
-	/* margin-right: 1vw;
-	margin-left: 1vw; */
-	/* margin-top: 1vh; */
 	margin-bottom: 1vh;
 	background-color: #2d6a4f;
-	/* border-radius: 25vh 25vh 25vh 25vh; */
   }
   
   .nav {
-	/* background-color: red; */
 	width: auto;
 	height: 100%;
 	align-items: center;
