@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,20 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	<script src="script.js"></script>
 </head>
+
 <body>
 	<header>
 		<div class="nav-bar">
 			<ul class="nav">
-				<li><a href="">Notre histoire</a></li>
+				<li><a id="to-history">Notre histoire</a></li>
 				<li><a href="">Équipe</a></li>
 				<li><a href="">Nos produits</a></li>
 				<li><a href="">Contact</a></li>
 			</ul>
 		</div>
 	</header>
+
 	<div class="home-screen">
 		<div class="case-logo">
 			<img id="logo" src="./img/logo_leonoel_ia.jpg" alt="Logo LeoNoel">
@@ -31,12 +33,17 @@
 		</div>
 	</div>
 	<div class="down-arrow">
-		<a href="#history">
-			<i class="fas fa-tree down-arrow__icon" id="down-arrow"></i>
-		</a>
+		<i class="fas fa-tree down-arrow__icon" id="down-arrow"></i>
 	</div>
-	<div id="history">
 
+	<div class="history">
+		<div class="history-title"><p id="history-title">Notre histoire</p></div>
+		<div class="history-text" id="history-text">
+			<p id="p1">Au cœur d'un petit village enneigé vivait une famille d'artistes de Noël, maîtres dans la fabrication de puzzles enchanteurs. Le Père Noël dirigeait avec sagesse cet atelier magique où régnait la Mère Flocon, douée d'une créativité sans bornes. Le jeune Léo, passionné par Noël, découpait avec précision chaque pièce, vibrant à l'idée de partager la magie des fêtes. Pendant ce temps, dans un village voisin, des enfants désœuvrés rêvaient d'un Noël avec des cadeaux et un sapin.</p>
+			<p id="p2">Touché, Léo décida de leur apporter la magie de Noël avec ses créations. Le jour du réveillon, les enfants s'émerveillèrent devant les puzzles offerts par Léo, répandant ainsi la magie de Noël dans tout le village. Une tradition est née : chaque Noël, les enfants choisissaient un puzzle pour célébrer la magie de Noël, perpétuant ainsi l'héritage de la famille Noël, qui, année après année, entretenait la magie de Noël.</p>
+		</div>
 	</div>
+	<script src="script.js"></script>
 </body>
+
 </html>
