@@ -13,11 +13,20 @@ downArrow.addEventListener("click", function () {
 	});
 });
 
+const navProducts = document.getElementById("to-products");
+
+navProducts.addEventListener("click", function () {
+	window.scrollBy({
+		top: window.innerHeight,
+		behavior: "smooth"
+	});
+});
+
 const navHistory = document.getElementById("to-history");
 
 navHistory.addEventListener("click", function () {
 	window.scrollBy({
-		top: window.innerHeight,
+		top: window.innerHeight*2,
 		behavior: "smooth"
 	});
 });
