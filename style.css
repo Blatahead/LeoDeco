@@ -2,109 +2,136 @@
 	margin: 0;
 	box-sizing: border-box;
 	padding: 0;
-  }
+}
 
-  html{
+html {
 	scroll-behavior: smooth;
-  }
-  
-  body {
+}
+
+body {
 	background-color: #1b4332;
-	height: 200vh;
-  }
-  
-  header {
+	height: 100vh;
+}
+
+header {
 	width: 100%;
 	height: 12vh;
-  }
-  
-  .nav-bar {
+}
+
+.nav-bar {
 	width: auto;
 	height: 100%;
 	margin-bottom: 1vh;
 	/* background-color: #2d6a4f; */
 	background-image: url("./img/wood_back.jpg");
-  }
-  
-  .nav {
+}
+
+.nav {
 	width: auto;
 	height: 100%;
 	align-items: center;
 	display: flex;
 	justify-content: space-evenly;
 	list-style-type: none;
-  }
-  
-  li a {
+}
+
+li a {
 	font-family: 'Pacifico', cursive;
 	/* color: #b7e4c7; */
 	color: #2d6a4f;
 	text-decoration: none;
 	font-size: 2vw;
-  }
-  
-  li a:hover {
+}
+
+li a:hover {
 	color: #d8f3dc;
 	transition: 0.5s;
-  }
+}
 
-  #to-history, #to-products, #to-team, #to-contact{
+#to-history,
+#to-products,
+#to-team,
+#to-contact {
 	cursor: pointer;
-  }
-  
-  ::-webkit-scrollbar {
+}
+
+::-webkit-scrollbar {
 	width: 0px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
 	background: #d8f3dc;
 	border-radius: 10px;
-  }
+}
 
-  .home-screen{
+.home-screen {
 	width: 100%;
 	height: 88vh;
+
+	background-color: #1b4332;
+	opacity: 1;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #429a76 27px ), repeating-linear-gradient( #B7E4C755, #1b4332 );
 
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-  }
+}
 
-  .case-logo{
-	width:auto;
+.case-logo {
+	width: auto;
 	height: 50vh;
-  }
+}
 
-  #logo{
+#logo {
 	height: 50vh;
 	border-radius: 50%;
-  }
+}
 
-  .text-welcome{
+.text-welcome {
 	font-family: 'Pacifico', cursive;
 	color: #b7e4c7;
 	text-decoration: none;
 
-	#title{
-		font-size: 5vw;
+	#title {
+		font-size: 7vw;
 	}
 
-	#subtitle{
+	#subtitle {
 		font-size: 3vw;
 	}
-  }
+}
 
-  .down-arrow {
+.down-arrow-to-products {
 	position: absolute;
-	bottom: 0;
+	top: 90vh;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 50px;
 	height: 50px;
 	animation: bounce 2s infinite;
-  }
-  
-  .down-arrow__icon {
+}
+
+.down-arrow-to-team {
+	position: absolute;
+	top: 190vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 50px;
+	animation: bounce 2s infinite;
+}
+
+.down-arrow-to-history {
+	position: absolute;
+	top: 390vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 50px;
+	animation: bounce 2s infinite;
+}
+
+.down-arrow__icon {
 	font-size: 3em;
 	/* color: #B7E4C7; */
 	transform: rotate(180deg);
@@ -113,24 +140,51 @@
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
-  }
+}
 
-  
+.down-arrow__icon-to-team {
+	font-size: 3em;
+	/* background-color: #B7E4C7; */
+	transform: rotate(180deg);
+	cursor: pointer;
+	background-image: url('./img/wood_back.jpg');
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: #B7E4C7;
+}
+.down-arrow__icon-to-history {
+	font-size: 3em;
+	/* background-color: #B7E4C7; */
+	transform: rotate(180deg);
+	cursor: pointer;
+	background-image: url('./img/wood_back.jpg');
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
 
-
-  .history{
+.history {
 	width: auto;
 	height: 100vh;
 	background-color: #b7e4c7;
-  }
-  
-.history-title{
-	width: 100%;
-	height: 14vh; 
 }
 
-#history-title{
-	font-size: 5vw;
+.history-title,
+.products-title,
+.team-title {
+	width: 100%;
+	height: 15vh;
+}
+
+#products-title {
+	font-size: 6vw;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	color: #b7e4c7;
+}
+
+#history-title {
+	font-size: 6vw;
 	font-family: 'Pacifico', cursive;
 	text-align: center;
 
@@ -140,23 +194,34 @@
 	color: transparent;
 }
 
-.history-text{
+#team-title{
+	font-size:6vw;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+
+	background-image: url('./img/wood_back.jpg');
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.history-text {
 	width: 100vw;
-	height:86vh;
-	text-align:justify;
+	height: 75vh;
+	text-align: justify;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 	flex: auto;
-	
 
-	p{
+
+	p {
 		/* height: 50%; */
 		flex-wrap: wrap;
-		font-size: 2.3vw;
+		font-size: 2.2vw;
 		font-family: 'Pacifico', cursive;
 		color: #2d6a4f;
-		
+
 		margin-bottom: auto;
 		margin-top: auto;
 		margin-left: 2vw;
@@ -168,28 +233,33 @@
 	0% {
 		bottom: 0;
 	}
+
 	50% {
 		bottom: 20px;
 	}
+
 	100% {
 		bottom: 0;
 	}
 }
 
-.products{
+.products {
 	background-image: url("./img/wood_back_large.jpg");
 	width: 100%;
 	height: 100vh;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
 .grid {
 	width: 100%;
 	height: auto;
-	
+
 	display: flex;
 	justify-content: space-evenly;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .card {
@@ -200,23 +270,23 @@
 	background-image: url("./img/back\ product.png");
 	background-size: cover;
 	position: relative;
-	
-	.img_product{
+
+	.img_product {
 		width: 20vw;
 		height: 60vh;
 		transition-duration: 1s;
 	}
 
-	.img_product:hover{
+	.img_product:hover {
 		transform: scale(1.1);
 		transition-duration: 1s;
 	}
 
-	#in-creation{
-		filter:grayscale(100%);
+	#in-creation {
+		filter: grayscale(100%);
 	}
 
-	.logo_product{
+	.logo_product {
 		position: absolute;
 		top: 1vh;
 		right: 1vh;
@@ -224,7 +294,7 @@
 		border-radius: 50%;
 	}
 
-	p{
+	p {
 		font-size: 3vw;
 		font-family: 'Pacifico', cursive;
 		text-align: center;
@@ -238,4 +308,72 @@
 	}
 }
 
+.team {
+	height: 200vh;
+	width: 100%;
 
+	background-color: #2a664d;
+	background-image:  linear-gradient(30deg, #59836e 12%, transparent 12.5%, transparent 87%, #59836e 87.5%, #59836e), linear-gradient(150deg, #59836e 12%, transparent 12.5%, transparent 87%, #59836e 87.5%, #59836e), linear-gradient(30deg, #59836e 12%, transparent 12.5%, transparent 87%, #59836e 87.5%, #59836e), linear-gradient(150deg, #59836e 12%, transparent 12.5%, transparent 87%, #59836e 87.5%, #59836e), linear-gradient(60deg, #59836e77 25%, transparent 25.5%, transparent 75%, #59836e77 75%, #59836e77), linear-gradient(60deg, #59836e77 25%, transparent 25.5%, transparent 75%, #59836e77 75%, #59836e77);
+	background-size: 54px 95px;
+	background-position: 0 0, 0 0, 27px 47px, 27px 47px, 0 0, 27px 47px;
+
+	color: #b7e4c7;
+}
+
+.team-grid{
+	display: flex;
+	flex-direction: column;
+	height: 170vh;
+	margin-top:10vh;
+
+	.leonie, .antonin, .raphael{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+
+	section{
+		display: flex;
+		place-items: left;
+		align-content: center;
+		flex-direction: row;
+	}
+	h1{
+		font-size: 3vh;
+		text-align: center;
+	}
+	p{
+		text-align: justify;
+		font-size: 2vw;
+	}
+	h3{
+		font-size: 2.5vw;
+	}
+	img{
+		height: 20vh;
+	}
+
+	.profil{
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.description-team{
+		margin-left: 2vw;
+		margin-right: 2vw;
+	}
+}
+
+.hidden{
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 2s;
+}
+
+.show{
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}

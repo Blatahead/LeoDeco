@@ -4,15 +4,31 @@ var newHeightDivHistoryText = 100-heightDivHistoryTitle+'vh';
 
 document.getElementById("history-text").style.height = newHeightDivHistoryText;
 
-const downArrow = document.getElementById("down-arrow");
 
-downArrow.addEventListener("click", function () {
+const downArrowProducts = document.getElementById("down-arrow-to-products");
+
+downArrowProducts.addEventListener("click", function () {
 	window.scrollBy({
 		top: window.innerHeight,
 		behavior: "smooth"
 	});
 });
+const downArrowTeam = document.getElementById("down-arrow-to-team");
 
+downArrowTeam.addEventListener("click", function () {
+	window.scrollBy({
+		top: window.innerHeight,
+		behavior: "smooth"
+	});
+});
+const downArrowHistory = document.getElementById("down-arrow-to-history");
+
+downArrowHistory.addEventListener("click", function () {
+	window.scrollBy({
+		top: window.innerHeight,
+		behavior: "smooth"
+	});
+});
 const navProducts = document.getElementById("to-products");
 
 navProducts.addEventListener("click", function () {
@@ -22,11 +38,37 @@ navProducts.addEventListener("click", function () {
 	});
 });
 
-const navHistory = document.getElementById("to-history");
+const navTeam = document.getElementById("to-team");
 
-navHistory.addEventListener("click", function () {
+navTeam.addEventListener("click", function () {
 	window.scrollBy({
 		top: window.innerHeight*2,
 		behavior: "smooth"
 	});
 });
+
+const navHistory = document.getElementById("to-history");
+
+navHistory.addEventListener("click", function () {
+	window.scrollBy({
+		top: window.innerHeight*4,
+		behavior: "smooth"
+	});
+});
+
+// Gérer l'apparition de la team
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		console.log(entry)
+		if(entry.isIntersecting){
+			entry.target.classList.add('show');
+		}else{
+			entry.target.classList.remove('show');
+		}
+	});
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+//faire les clics sur les sapins
+// faire la div team
