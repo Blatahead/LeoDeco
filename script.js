@@ -29,32 +29,9 @@ downArrowHistory.addEventListener("click", function () {
 		behavior: "smooth"
 	});
 });
-const navProducts = document.getElementById("to-products");
 
-navProducts.addEventListener("click", function () {
-	window.scrollBy({
-		top: window.innerHeight,
-		behavior: "smooth"
-	});
-});
 
-const navTeam = document.getElementById("to-team");
 
-navTeam.addEventListener("click", function () {
-	window.scrollBy({
-		top: window.innerHeight*2,
-		behavior: "smooth"
-	});
-});
-
-const navHistory = document.getElementById("to-history");
-
-navHistory.addEventListener("click", function () {
-	window.scrollBy({
-		top: window.innerHeight*4,
-		behavior: "smooth"
-	});
-});
 
 // Gérer l'apparition de la team
 const observer = new IntersectionObserver((entries) => {
