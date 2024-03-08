@@ -441,8 +441,94 @@ li a:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	text-align: center	;
 
 	div{
 		text-align: center;
 	}
+}
+
+.social-team{
+	text-align: center;
+}
+
+/* CSS pour le menu burger */
+.burger-menu {
+    display: none;
+}
+
+.burger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 930px) {
+    .nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+		position: absolute;
+		right: 4vw;
+		top: 4vh;	
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+	.home-screen{
+		flex-direction: column;
+
+		#logo{
+			width: 50vw;
+			height: 50vw;
+			aspect-ratio:initial;
+		}
+
+		.case-logo{
+			height: fit-content;
+		}
+
+		#title{
+			font-size: 15vw;
+		}
+
+		#subtitle{
+			font-size: 5vw;
+		}
+	}
+
+	#products-title{
+		font-size: 15vw;
+	}
+
+	.grid{
+		flex-direction: column;
+		justify-content: space-around;
+		margin: 0;
+		height: 100%;
+	}
+
+	.card{
+		width: 75%;
+		height: 30vh;
+		margin-left: auto;
+		margin-right: auto;
+
+		.img_product{
+			height: 30vh;
+			width: 20vh;
+		}
+
+		p{
+			font-size: 6vw;
+		}
+	}
+
+	
 }
