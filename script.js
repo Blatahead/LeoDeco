@@ -69,3 +69,8 @@ function BurgerTranslate(){
 		burgerState=false
 	}
 }
+
+function CloseNavBar(){
+	document.getElementById("navbar-nav").style.right="-100%"
+	burgerState=false
+}
