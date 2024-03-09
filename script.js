@@ -50,11 +50,22 @@ hiddenElements.forEach((el) => observer.observe(el));
 //faire les clics sur les sapins
 // faire la div team
 
-document.addEventListener('DOMContentLoaded', function () {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const nav = document.querySelector('.nav');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const burgerMenu = document.querySelector('.burger-menu');
+//     const nav = document.querySelector('.nav');
 
-    burgerMenu.addEventListener('click', function () {
-        nav.classList.toggle('active');
-    });
-});
+//     burgerMenu.addEventListener('click', function () {
+//         nav.classList.toggle('active');
+//     });
+// });
+
+var burgerState = false
+function BurgerTranslate(){
+	if(burgerState==false){
+		document.getElementById("navbar-nav").style.right="0%"
+		burgerState=true
+	}else{
+		document.getElementById("navbar-nav").style.right="-100%"
+		burgerState=false
+	}
+}

@@ -28,7 +28,7 @@ header {
 	background-image: url("./img/wood_back.jpg");
 }
 
-.nav {
+.navbar-nav {
 	width: auto;
 	height: 100%;
 	align-items: center;
@@ -461,14 +461,12 @@ li a:hover {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: #1b4332;
     margin: 5px 0;
 }
 
 @media screen and (max-width: 930px) {
-    .nav {
-        display: none;
-    }
+    
 
     .burger-menu {
         display: block;
@@ -477,16 +475,34 @@ li a:hover {
 		top: 4vh;	
     }
 
-    .nav.active {
-        display: block;
-    }
+	.navbar-nav {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		top: 12vh;
+		right: -100%;
+		width: 100%;
+		height: calc(100% - 12vh);
+		transition: all 0.3s ease;
+		background-image: url("./img/wood_back.jpg");
+		z-index: 999;
+	}
+
+	ul li a{
+		font-size: 7vw;
+	}
+
+
+	.navbar-nav.active {
+		right: 0;
+	}
 
 	.home-screen{
 		flex-direction: column;
 
 		#logo{
-			width: 50vw;
-			height: 50vw;
+			width: 45vw;
+			height: 45vw;
 			aspect-ratio:initial;
 		}
 
@@ -495,11 +511,14 @@ li a:hover {
 		}
 
 		#title{
+			margin-top: -10vh;
 			font-size: 15vw;
+			text-align: center;
 		}
 
 		#subtitle{
 			font-size: 5vw;
+			text-align: center;
 		}
 	}
 
@@ -531,4 +550,11 @@ li a:hover {
 	}
 
 	
+}
+
+@media screen and (max-width: 530px) {
+	.home-screen #logo{
+		width: 75vw;
+		height: 75vw;
+	}
 }
