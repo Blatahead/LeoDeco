@@ -583,7 +583,7 @@ li a:hover {
 	
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 730px) {
 	.home-screen #logo{
 		width: 75vw;
 		height: 75vw;
