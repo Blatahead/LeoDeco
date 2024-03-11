@@ -579,7 +579,20 @@ li a:hover {
 			font-size: 6vw;
 		}
 	}
+	.history-text {
+		justify-content: space-evenly;
+		height: 85%;
 
+
+		p {
+			height: 50%;
+			margin-left: 4vw;
+			margin-right: 4vw;
+			font-size: 4.5vw;
+		}
+
+	}
+	
 	
 }
 @media screen and (max-height: 830px) and (max-width: 500px)  {
