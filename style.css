@@ -582,6 +582,84 @@ li a:hover {
 
 	
 }
+@media screen and (max-height: 830px) and (max-width: 500px)  {
+	.home-screen{
+
+		.case-logo{
+			height: fit-content;
+		}
+
+		#title{
+			font-size: 7vw;
+			text-align: center;
+		}
+
+		#subtitle{
+			font-size: 3vw;
+			text-align: center;
+		}
+	}
+	
+
+	.navbar-nav a {
+		font-size: 5vh;
+	}
+}
+@media screen and (max-height: 730px)  {
+	.home-screen{
+		#logo{
+			width: 30vw;
+			height: 30vw;
+		}
+
+		.case-logo{
+			height: fit-content;
+		}
+
+		#title{
+			font-size: 7vw;
+			text-align: center;
+		}
+
+		#subtitle{
+			font-size: 3vw;
+			text-align: center;
+		}
+	}
+	.down-arrow-to-products {
+		right: 0;
+		left: unset;
+
+		.down-arrow__icon{
+			font-size: 2em;
+			margin-top: 3vh;
+		}
+	}
+}
+@media screen and (max-height: 580px)  {
+	.home-screen{
+		#logo{
+			width: 25vw;
+			height: 25vw;
+		}
+
+		.case-logo{
+			height: fit-content;
+		}
+
+		#title{
+			font-size: 7vw;
+			text-align: center;
+		}
+
+		#subtitle{
+			font-size: 3vw;
+			text-align: center;
+		}
+	}
+}
+
+
 
 @media screen and (max-width: 730px) {
 	.home-screen #logo{
