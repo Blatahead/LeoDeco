@@ -74,3 +74,13 @@ function CloseNavBar(){
 	document.getElementById("navbar-nav").style.right="-100%"
 	burgerState=false
 }
+
+//gérer l'embed
+// document.getElementById('button-tree').addEventListener('click', function() {
+// 	var embedContainer = document.getElementById('embed-container');
+// 	if (embedContainer.style.display === 'none') {
+// 		embedContainer.style.display = 'block';
+// 	} else {
+// 		embedContainer.style.display = 'none';
+// 	}
+// });

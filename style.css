@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
 
 * {
 	margin: 0;
@@ -13,6 +14,7 @@ html {
 body {
 	background-color: #1b4332;
 	height: 100vh;
+	cursor: default;
 }
 
 header {
@@ -248,7 +250,7 @@ li a:hover {
 
 .grid {
 	width: 100%;
-	height: auto;
+	height: 70vh;
 
 	display: flex;
 	justify-content: space-evenly;
@@ -265,10 +267,13 @@ li a:hover {
 	/* background-color: #F5F5FA; */
 	background-size: cover;
 	position: relative;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 	.img_product {
 		width: 20vw;
-		height: 60vh;
+		height: 80%;
 		transition-duration: 1s;
 	}
 
@@ -276,6 +281,21 @@ li a:hover {
 		transform: scale(1.1);
 		transition-duration: 1s;
 	}
+
+	.embed-container{
+		display: flex;
+
+		.embed{
+			transform: translateY(-5vh);
+			margin-left: auto;
+			margin-right: auto;
+
+			button{
+				color: #3c7459;
+			}
+		}
+	}
+		
 
 	#in-creation {
 		filter: grayscale(100%);
@@ -449,6 +469,7 @@ li a:hover {
 
 	div{
 		text-align: center;
+		width: 33vw;
 	}
 }
 
@@ -493,13 +514,15 @@ li a:hover {
 			font-size: 5vw;
 			text-align: center;
 		}
+
+		
 	}
 }
 
 @media screen and (max-width: 930px) {
     
-
-    .burger-menu {
+	
+	.burger-menu {
         display: block;
 		position: absolute;
 		right: 4vw;
@@ -540,7 +563,7 @@ li a:hover {
 		.case-logo{
 			height: fit-content;
 		}
-
+		
 		#title{
 			margin-top: -10vh;
 			font-size: 15vw;
@@ -564,6 +587,10 @@ li a:hover {
 		margin: 0;
 		height: 100%;
 	}
+	
+	.products{
+		height: 120vh;
+	}
 
 	.card{
 		width: 75%;
@@ -578,6 +605,10 @@ li a:hover {
 
 		p{
 			font-size: 6vw;
+			position: absolute;
+			right: 1%;
+			top: 50%;
+			transform: translateY(50%);
 		}
 	}
 	.history-text {
@@ -752,9 +783,9 @@ li a:hover {
 }
 
 
-.button-67 {
+/* .button-67 {
 	align-items: center;
-	background: #B7E4C7;
+	background:  #d8f3dc;
 	border: 0;
 	border-radius: 8px;
 	box-shadow: -10px -10px 30px 0 #d8f3dc,10px 10px 30px 0 #1d0dca17;
@@ -762,16 +793,16 @@ li a:hover {
 	color: #2a1f62;
 	cursor: pointer;
 	display: flex;
-	font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+	font-family:"Inclusive Sans", sans-serif;
 	font-size: 1rem;
 	justify-content: center;
 	line-height: 1.5rem;
 	padding: 15px;
-	position: relative;
+	position: relative; */
 	/* left: 50%; */
 	/* top: 0; */
 	/* transform: translateX(-50%); */
-	margin-left: auto;
+	/* margin-left: auto;
 	margin-right: auto;
 	transform: translateY(-5vh);
 	text-align: left;
@@ -784,9 +815,9 @@ li a:hover {
 	word-break: normal;
 	word-spacing: normal;
 	z-index: 999;
-  }
+  } */
   
-  .button-67:hover {
-	background: #d8f3dc;
+  /* .button-67:hover {
+	background: #B7E4C7 ;
 	box-shadow: -15px -15px 30px 0 #d8f3dc, 15px 15px 30px 0 #1d0dca17;
-  }
+  } */
