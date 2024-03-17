@@ -63,3 +63,18 @@ function CloseNavBar(){
 	document.getElementById("navbar-nav").style.right="-100%"
 	burgerState=false
 }
+
+
+// popup pour la vue 3D
+document.addEventListener('DOMContentLoaded', function() {
+    var imgProducts = document.querySelectorAll('.img_product');
+    imgProducts.forEach(function(imgProduct) {
+        imgProduct.addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'block';
+        });
+    });
+});
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
