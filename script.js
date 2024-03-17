@@ -47,17 +47,6 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
-//faire les clics sur les sapins
-// faire la div team
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const burgerMenu = document.querySelector('.burger-menu');
-//     const nav = document.querySelector('.nav');
-
-//     burgerMenu.addEventListener('click', function () {
-//         nav.classList.toggle('active');
-//     });
-// });
 
 var burgerState = false
 function BurgerTranslate(){
@@ -74,13 +63,3 @@ function CloseNavBar(){
 	document.getElementById("navbar-nav").style.right="-100%"
 	burgerState=false
 }
-
-//gérer l'embed
-// document.getElementById('button-tree').addEventListener('click', function() {
-// 	var embedContainer = document.getElementById('embed-container');
-// 	if (embedContainer.style.display === 'none') {
-// 		embedContainer.style.display = 'block';
-// 	} else {
-// 		embedContainer.style.display = 'none';
-// 	}
-// });
