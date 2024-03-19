@@ -50,3 +50,86 @@ document.addEventListener('DOMContentLoaded', function() {
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
+
+function startForm() {
+    document.getElementById('welcomePage').classList.add('hidden');
+    document.getElementById('formPage').classList.remove('hidden');
+	document.getElementById('welcomePage').style.display = 'none';
+    document.getElementById('firstName').focus();
+}
+
+function nextQuestion() {
+    const currentQuestion = document.querySelector('.question.visible');
+    const nextQuestion = currentQuestion.nextElementSibling;
+
+    // Vérifier si la question actuelle est la dernière question
+    const isLastQuestion = currentQuestion.id === 'lastQuestion';
+
+
+    // Vérifier si tous le champ obligatoir est rempli
+    const requiredInputs = currentQuestion.querySelectorAll('input[required], select[required]');
+    let allFieldsFilled = true;
+    requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+            allFieldsFilled = false;
+            input.classList.add('error');
+        } else {
+            input.classList.remove('error');
+        }
+    });
+
+    if (!allFieldsFilled) {
+        // Afficher un message d'erreur
+        return;
+    }
+
+    if (nextQuestion && !isLastQuestion) {
+        currentQuestion.classList.remove('visible', 'slide-in');
+        currentQuestion.classList.add('slide-out');
+        setTimeout(() => {
+			currentQuestion.classList.add('hidden');
+            nextQuestion.classList.remove('hidden', 'slide-out');
+            nextQuestion.classList.add('visible', 'slide-in');
+            nextQuestion.querySelector('input, select').focus();
+        }, 500); // Attendre la fin de la transition
+    } else if (nextQuestion && isLastQuestion) {
+        currentQuestion.classList.remove('visible', 'slide-in');
+        currentQuestion.classList.add('slide-out');
+        setTimeout(() => {
+            currentQuestion.classList.add('hidden');
+			nextQuestion.classList.remove('hidden', 'slide-out');
+            nextQuestion.classList.add('visible', 'slide-in');
+            nextQuestion.querySelector('input, select').focus();
+            document.getElementById('continueButton').classList.add('hidden');
+            document.getElementById('submitButton').classList.remove('hidden');
+        }, 500); // Attendre la fin de la transition
+    }
+}
+
+function previousQuestion() {
+    const currentQuestion = document.querySelector('.question.visible');
+	const previousQuestion = currentQuestion.previousElementSibling;
+
+    // Vérifier si la question actuelle est la dernière question
+    const isLastQuestion = currentQuestion.id === 'lastQuestion';
+
+    // Vérifier si la question actuelle est la première question
+    const isFirstQuestion = currentQuestion.id === 'firstQuestion';
+
+
+    if (previousQuestion && !isFirstQuestion ) {
+        currentQuestion.classList.remove('visible', 'slide-in');
+        currentQuestion.classList.add('slide-out');
+        setTimeout(() => {
+			currentQuestion.classList.add('hidden');
+            previousQuestion.classList.remove('hidden', 'slide-out');
+            previousQuestion.classList.add('visible', 'slide-in');
+            previousQuestion.querySelector('input, select').focus();
+			if(!isLastQuestion)
+			{
+				document.getElementById('submitButton').classList.add('hidden');
+				document.getElementById('continueButton').classList.remove('hidden');
+			}
+        }, 500); // Attendre la fin de la transition
+    } 
+}
