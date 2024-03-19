@@ -2,16 +2,7 @@ import { config } from "dotenv";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
 import { getDatabase, ref, set, child } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
-const firebaseConfig = {
-    apiKey: config.API_KEY,
-    authDomain: config.AUTH_DOMAIN,
-    databaseURL: config.DATABASE_URL,
-    projectId: config.PROJECT_ID,
-    storageBucket: config.STORAGE_BUCKET,
-    messagingSenderId: config.MESSAGING_SENDER_ID,
-    appId: config.env.APP_ID,
-    measurementId: config.MEASUREMENT_ID
-};
+const firebaseConfig = window.firebaseConfig;
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
