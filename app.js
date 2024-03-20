@@ -3,6 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebas
 import { getDatabase, ref, set, child } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
 const firebaseConfig = {
+	apiKey: process.env.API_KEY,
 	authDomain: process.env.AUTH_DOMAIN,
     databaseURL: process.env.DATABASE_URL,
     projectId: process.env.PROJECT_ID,
