@@ -45,5 +45,10 @@ document.getElementById("submitButton").addEventListener('click', function () {
 					divToHide.classList.remove('show', 'visible');
 				}
 			  }, 1500);
-		});
+		}).then(() => {
+			setTimeout(() => {
+				const divToHide = document.getElementById('preorder-form');
+				divToHide.style.display = 'none';
+			}, 3000);
+		})
 });

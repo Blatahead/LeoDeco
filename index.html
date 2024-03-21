@@ -48,7 +48,7 @@
 		<div class="container">
 			<div id="welcomePage" class="page">
 				<h1>Bienvenue !</h1>
-				<button onclick="startForm()">Commencer</button>
+				<button id="startButton" onclick="startForm()">Commencer</button>
 			</div>
 
 			<div id="formPage" class="page hidden">
@@ -85,7 +85,7 @@
 					</div>
 
 					<div class="navigation">
-						<button type="button" onclick="previousQuestion()">Précédent</button>
+						<button id="previousButton" type="button" onclick="previousQuestion()">Précédent</button>
 						<button id="continueButton" type="button" onclick="nextQuestion()">Continuer</button>
 						<button id="submitButton" type="submit" class="hidden">Submit</button>
 					</div>
