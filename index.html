@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="icon" type="image/png" href="./img/logo_leonoel_round.png">
+	<script type="module" src="app.mjs"></script>
 </head>
 
 <body>
@@ -42,32 +43,32 @@
 	<div class="down-arrow-to-products">
 		<a href="#products"><i class="fas fa-tree down-arrow__icon" id="down-arrow-to-products"></i></a>
 	</div>
-	<div class="preorderform">
+	<div class="preorder-form" id="preorder-form">
 
 		<div class="container">
 			<div id="welcomePage" class="page">
 				<h1>Bienvenue !</h1>
 				<button onclick="startForm()">Commencer</button>
 			</div>
-	
+
 			<div id="formPage" class="page hidden">
 				<form id="preorderForm">
 					<div class="question visible" id="firstQuestion">
 						<label for="firstName">Quel est votre prénom ?<span>*</span></label>
 						<input type="text" id="firstName" required>
 					</div>
-			
+
 					<div class="question hidden">
 						<label for="lastName">Quel est votre nom de famille ?<span>*</span></label>
 						<input type="text" id="lastName" required>
 					</div>
-			
+
 					<div class="question hidden">
 						<label for="email">Quelle est votre adresse e-mail ?<span>*</span></label>
 						<input type="email" id="email" required>
 						<p>Nous pourrons revenir vers vous pour la suite.</p>
 					</div>
-			
+
 					<div class="question hidden" id="lastQuestion">
 						<label for="quantity">Combien de sapins souhaitez-vous précommander ?<span>*</span></label>
 						<select id="quantity" required>
@@ -77,20 +78,20 @@
 						</select>
 						<p>Le prix est de 19,99 €/unité.</p>
 					</div>
-			
+
 					<div class="question hidden">
 						<label for="postalCode">Quel est votre code postal ?<span>*</span></label>
 						<input type="text" id="postalCode" pattern="[0-9]{5}" required>
 					</div>
-			
+
 					<div class="navigation">
 						<button type="button" onclick="previousQuestion()">Précédent</button>
 						<button id="continueButton" type="button" onclick="nextQuestion()">Continuer</button>
-						<button id="submitButton" type="submit" class="hidden" >Submit</button>
-					</div>                
+						<button id="submitButton" type="submit" class="hidden">Submit</button>
+					</div>
 				</form>
 			</div>
-			
+
 			<div id="confirmationPage" class="page hidden">
 				<h2>Merci ! Votre précommande a été envoyée avec succès.</h2>
 			</div>
@@ -113,10 +114,7 @@
 						</iframe>
 					</div>
 				</div>
-				<div id="embed-container" class="embed-container">
-					<div class="embed" data-tf-live="01HS743ZN3N6HP2GG3ZPPBW7JZ"></div>
-					<script src="//embed.typeform.com/next/embed.js"></script>
-				</div>
+				<button class="preorder-button" role="button" id="preorder-button">Pré commander</button>
 				<p>Sapin de Noël</p>
 			</div>
 			<div class="card"><img src="./img/logo_leonoel_ia.jpg" class="logo_product" alt=""><img
@@ -230,7 +228,7 @@
 	<div class="contacts">
 		<div class="contacts-title"></div>
 	</div>
-	
+
 	<footer class="footer" id="footer">
 		<div class="social">
 			<div class="social-leonie">
@@ -285,9 +283,9 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-	<!-- <script src="config.js"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script> -->
 	<script src="script.js"></script>
-    <script type="module" src="app.js"></script>
 </body>
 
 </html>
