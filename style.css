@@ -877,6 +877,15 @@ li a:hover {
 	justify-content: space-evenly;
 	background-color: #3c7459;
 
+	.close {
+		position: absolute;
+		top: 10%;
+		right: 10.7%;
+		font-size: 30px;
+		color: #fff;
+		cursor: pointer;
+	}
+
 	h1 {
 		color: #ceebd3;
 		font-size: 5vw;

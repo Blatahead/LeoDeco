@@ -65,7 +65,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-
+function closeForm() {
+	setTimeout(() => {
+		const divToHide = document.getElementById('preorder-form');
+		if (divToHide) {
+			divToHide.classList.remove('show', 'visible');
+		}
+	}, 10);
+	setTimeout(() => {
+		const divToHide = document.getElementById('preorder-form');
+		divToHide.style.display = 'none';
+	}, 1000);
+}
 
 
 function startForm() {
