@@ -4,6 +4,12 @@ var newHeightDivHistoryText = 100 - heightDivHistoryTitle + 'vh';
 
 document.getElementById("history-text").style.height = newHeightDivHistoryText;
 
+//bloquer la touche Entrer
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+    }
+});
 
 // Gérer l'apparition de la team
 const observer = new IntersectionObserver((entries) => {
