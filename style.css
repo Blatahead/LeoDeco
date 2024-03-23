@@ -571,7 +571,7 @@ li a:hover {
 	}
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 940px) {
 
 
 	.burger-menu {
@@ -680,7 +680,12 @@ li a:hover {
 
 	}
 
-
+	.preorder-button{
+		width: fit-content;
+		font-size: 2vw;
+		height: 10vh;
+		padding: 5px;
+	}
 }
 
 @media screen and (max-height: 830px) and (max-width: 500px) {
@@ -844,7 +849,7 @@ li a:hover {
 			justify-content: space-between;
 		}
 	}
-
+	
 }
 
 #welcomePage {
@@ -1017,8 +1022,7 @@ select {
 	font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 	font-size: 1rem;
 	justify-content: center;
-	line-height: 1.5rem;
-	padding: 15px;
+	padding: 1vh;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -1029,7 +1033,6 @@ select {
 	-webkit-user-select: none;
 	touch-action: manipulation;
 	white-space: pre;
-	width: max-content;
 	word-break: normal;
 	word-spacing: normal;
 }
@@ -1075,7 +1078,7 @@ select {
 	-webkit-user-select: none;
 	touch-action: manipulation;
 	white-space: pre;
-	width: max-content;
+	/* width: max-content; */
 	word-break: normal;
 	word-spacing: normal;
 }
