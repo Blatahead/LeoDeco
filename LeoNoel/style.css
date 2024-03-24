@@ -18,6 +18,32 @@ body {
 	cursor: default;
 }
 
+#alerte {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50vh;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+
+  /* Media query pour détecter le mode paysage sur mobile */
+  @media screen and (orientation: landscape) {
+    #alerte {
+      display: block;
+    }
+	body{
+		overflow: hidden;
+	}
+  }
+
 header {
 	width: 100%;
 	height: 12vh;
