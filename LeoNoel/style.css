@@ -35,7 +35,7 @@ body {
   }
 
   /* Media query pour détecter le mode paysage sur mobile */
-  @media screen and (orientation: landscape) {
+  @media screen and (max-height: 530px) and (orientation: landscape) {
     #alerte {
       display: block;
     }
