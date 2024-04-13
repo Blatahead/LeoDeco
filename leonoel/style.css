@@ -759,16 +759,6 @@ li a:hover {
 			text-align: center;
 		}
 	}
-
-	.down-arrow-to-products {
-		right: 0;
-		left: unset;
-
-		.down-arrow__icon {
-			font-size: 2em;
-			margin-top: 3vh;
-		}
-	}
 }
 
 @media screen and (max-height: 580px) {
